@@ -1,4 +1,4 @@
-package com.cengiztoru.movies_simplifiedcoding.data.network
+package com.cengiztoru.movies_simplifiedcoding.data.api
 
 import com.cengiztoru.movies_simplifiedcoding.data.models.Movie
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.cengiztoru.movies_simplifiedcoding.data.repositories
+package com.cengiztoru.movies_simplifiedcoding.data.api
 
 import retrofit2.Response
 import java.io.IOException

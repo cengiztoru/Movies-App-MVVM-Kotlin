@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cengiztoru.movies_simplifiedcoding.R
-import com.cengiztoru.movies_simplifiedcoding.data.network.MoviesApi
+import com.cengiztoru.movies_simplifiedcoding.data.api.MoviesApi
 import com.cengiztoru.movies_simplifiedcoding.data.repositories.MoviesRepository
 import kotlinx.android.synthetic.main.movies_fragment.*
 
