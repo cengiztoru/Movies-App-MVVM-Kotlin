@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="movie"
+            type="com.cengiztoru.movies_simplifiedcoding.data.models.Movie" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="195dp"
+                        android:background="@android:color/darker_gray"
+                        android:scaleType="matrix" />
+
+                    <TextView
+                        android:id="@+id/textViewIsNew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:width="38dp"
+                        android:background="#1C9603"
+                        android:padding="2dp"
+                        android:text="New"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:visibility="@{movie.isNew == 0 ? View.INVISIBLE : View.VISIBLE}" />
+
+                    <TextView
+                        android:id="@+id/textViewRating"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="15dp"
+                        android:background="@drawable/textview_round_border_background"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="UA"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/relativelayout_background"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="3dp">
+
+                        <ImageView
+                            android:id="@+id/imageViewLike"
+                            android:layout_width="15dp"
+                            android:layout_height="14dp"
+                            android:layout_marginTop="3dp"
+                            android:layout_marginRight="6dp"
+                            android:background="@drawable/ic_like" />
+
+                        <TextView
+                            android:id="@+id/textViewLikePercent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/imageViewLike"
+                            android:text="78%"
+                            android:textColor="#ffffff"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewVotesCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/textViewLikePercent"
+                            android:layout_centerHorizontal="true"
+                            android:text="23023 votes"
+                            android:textColor="@android:color/white"
+                            android:textSize="10sp" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textViewTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{movie.title,default=Title}"
+                        android:textColor="#1A1A1A"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textViewLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textViewTitle"
+                        android:text="@{movie.language,default=Language}" />
+
+                    <Button
+                        android:id="@+id/button_book"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="Book" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="#414141" />
+
+                <TextView
+                    android:id="@+id/textViewType"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/textview_border_background"
+                    android:padding="2dp"
+                    android:text="@{movie.type}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>
