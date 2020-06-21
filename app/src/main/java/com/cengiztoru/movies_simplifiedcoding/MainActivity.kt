@@ -3,6 +3,8 @@ package com.cengiztoru.movies_simplifiedcoding
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.cengiztoru.movies_simplifiedcoding.data.network.MoviesApi
+import com.cengiztoru.movies_simplifiedcoding.data.repositories.MoviesRepository
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

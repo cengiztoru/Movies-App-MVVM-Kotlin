@@ -1,4 +1,4 @@
-package com.cengiztoru.movies_simplifiedcoding
+package com.cengiztoru.movies_simplifiedcoding.data.repositories
 
 import retrofit2.Response
 import java.io.IOException
@@ -16,7 +16,9 @@ abstract class SafeApiRequest {
         if (response.isSuccessful) {
             return response.body()!!
         } else {
-            throw ApiException("ERROR in SAFE_API_REQUEST CLASS" + response.code().toString())
+            throw ApiException(
+                "ERROR in SAFE_API_REQUEST CLASS" + response.code().toString()
+            )
         }
     }
 

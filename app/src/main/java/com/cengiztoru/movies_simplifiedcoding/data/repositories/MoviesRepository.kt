@@ -1,4 +1,6 @@
-package com.cengiztoru.movies_simplifiedcoding
+package com.cengiztoru.movies_simplifiedcoding.data.repositories
+
+import com.cengiztoru.movies_simplifiedcoding.data.network.MoviesApi
 
 
 /**     Code With 💗

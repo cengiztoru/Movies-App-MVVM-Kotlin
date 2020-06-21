@@ -1,4 +1,4 @@
-package com.cengiztoru.movies_simplifiedcoding
+package com.cengiztoru.movies_simplifiedcoding.data.models
 
 
 import com.google.gson.annotations.SerializedName

@@ -1,5 +1,6 @@
-package com.cengiztoru.movies_simplifiedcoding
+package com.cengiztoru.movies_simplifiedcoding.data.network
 
+import com.cengiztoru.movies_simplifiedcoding.data.models.Movie
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
