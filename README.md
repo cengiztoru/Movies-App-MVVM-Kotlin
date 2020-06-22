@@ -6,9 +6,13 @@
 
 ## ScreenShots
 
-![App Screen Shots](https://github.com/cengiztoru/Movies---MVVM-Kotlin/tree/master/screenshots/app.png)
 
-![App Screen Shots on Clicked](https://github.com/cengiztoru/Movies---MVVM-Kotlin/tree/master/screenshots/onclick.png)
+
+|                          App Screen                          |                     On Click Like Layout                     |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| ![App Screen Shots](https://raw.githubusercontent.com/cengiztoru/Movies-App-MVVM-Kotlin/master/screenshots/app.png) | ![App Screen Shots on Clicked](https://raw.githubusercontent.com/cengiztoru/Movies-App-MVVM-Kotlin/master/screenshots/onclick.png) |
+
+
 
 
 
