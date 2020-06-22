@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.cengiztoru.movies_simplifiedcoding.data.models.Movie
 import com.cengiztoru.movies_simplifiedcoding.data.repositories.MoviesRepository
-import com.cengiztoru.movies_simplifiedcoding.util.Coroutines
+import com.cengiztoru.movies_simplifiedcoding.util.CoroutinesUtil
 import kotlinx.coroutines.Job
 
 class MoviesViewModel(private val repository: MoviesRepository) : ViewModel() {
@@ -22,7 +22,7 @@ class MoviesViewModel(private val repository: MoviesRepository) : ViewModel() {
 //    }
 
     fun getMovies() {
-        job = Coroutines.ioThenMain(
+        job = CoroutinesUtil.ioThenMain(
             { repository.getMovies() },
             { _movies.value = it }
         )

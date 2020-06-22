@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
  * cengiztoru@gmail.com
  */
 
-object Coroutines {
+object CoroutinesUtil {
 
     /**
      * @author Cengiz TORU

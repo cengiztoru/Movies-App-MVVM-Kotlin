@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
-        <import type="android.view.View" />
 
         <variable
             name="movie"
             type="com.cengiztoru.movies_simplifiedcoding.data.models.Movie" />
+
+        <import type="android.view.View" />
     </data>
 
     <LinearLayout
@@ -16,6 +17,8 @@
         android:layout_marginTop="3dp">
 
         <androidx.cardview.widget.CardView
+            android:elevation="8dp"
+            app:cardCornerRadius="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="3dp">
@@ -30,6 +33,7 @@
                     android:layout_height="195dp">
 
                     <ImageView
+                        app:loadImage="@{movie.image}"
                         android:id="@+id/imageView"
                         android:layout_width="match_parent"
                         android:layout_height="195dp"
@@ -37,6 +41,7 @@
                         android:scaleType="matrix" />
 
                     <TextView
+                        android:textSize="12sp"
                         android:id="@+id/textViewIsNew"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -47,7 +52,6 @@
                         android:text="New"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
-                        android:textSize="12sp"
                         android:visibility="@{movie.isNew == 0 ? View.INVISIBLE : View.VISIBLE}" />
 
                     <TextView
@@ -157,7 +161,7 @@
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/textview_border_background"
                     android:padding="2dp"
-                    android:text="@{movie.type}"
+                    android:text="@{movie.type,default=2D}"
                     android:textAlignment="center"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
 

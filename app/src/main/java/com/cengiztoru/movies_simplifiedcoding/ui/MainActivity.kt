@@ -1,7 +1,8 @@
-package com.cengiztoru.movies_simplifiedcoding
+package com.cengiztoru.movies_simplifiedcoding.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.cengiztoru.movies_simplifiedcoding.R
 
 
 class MainActivity : AppCompatActivity() {
