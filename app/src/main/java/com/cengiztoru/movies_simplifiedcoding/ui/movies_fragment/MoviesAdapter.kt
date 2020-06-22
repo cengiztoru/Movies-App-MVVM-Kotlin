@@ -14,7 +14,7 @@ import com.cengiztoru.movies_simplifiedcoding.databinding.RecyclerviewMovieBindi
  * cengiztoru@gmail.com
  */
 
-class MoviesAdapter(private val movies: List<Movie>) :
+class MoviesAdapter(private val movies: List<Movie>, private val listener: IMoviesClickListener) :
     RecyclerView.Adapter<MoviesAdapter.MoviesViewHolder>() {
 
 
@@ -30,14 +30,23 @@ class MoviesAdapter(private val movies: List<Movie>) :
 
     //Bind data to ViewHolder
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
-        holder.recyclerviewMovieBinding.movie = movies[position]
+        holder.mBinding.movie = movies[position]
+
+//        holder.mBinding.root.setOnClickListener {}
+
+        holder.mBinding.buttonBook.setOnClickListener {
+            listener.itemClicked(holder.mBinding.buttonBook, movies[position])
+        }
+        holder.mBinding.layoutLike.setOnClickListener {
+            listener.itemClicked(holder.mBinding.layoutLike, movies[position])
+        }
     }
 
     override fun getItemCount() = movies.size
 
     inner class MoviesViewHolder(
-        val recyclerviewMovieBinding: RecyclerviewMovieBinding
-    ) : RecyclerView.ViewHolder(recyclerviewMovieBinding.root)
+        val mBinding: RecyclerviewMovieBinding
+    ) : RecyclerView.ViewHolder(mBinding.root)
 
 
 }
